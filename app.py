@@ -16,15 +16,10 @@ def clear_text():
 
 input = st.text_area("输入", key='text', placeholder='部落战，大家加油！', max_chars=1024)
 
-cols = st.columns(6)
+submit = st.button("提交")
+st.button("清空", on_click=clear_text)
 
-with cols[-2]:
-    st.button("清空", on_click=clear_text)
-
-with cols[-1]:
-    submit = st.button("提交")
-
-st.write('输出(最右边可以一键复制)')
+st.write('输出（可一键复制）')
 
 if submit:
     text = st.session_state["text"]
