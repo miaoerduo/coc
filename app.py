@@ -14,7 +14,7 @@ def clear_text():
     st.session_state["text"] = ""
 
 
-input = st.text_area("输入", key='text', placeholder='部落战，大家加油！')
+input = st.text_area("输入", key='text', placeholder='部落战，大家加油！', max_chars=1024)
 
 cols = st.columns(6)
 
